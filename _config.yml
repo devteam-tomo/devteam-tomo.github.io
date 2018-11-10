@@ -1,5 +1,5 @@
 ### Site info:
-title: Freshman21
+title: Project TOMO
 tagline: Another Jekyll theme, Freshman twenty-first
 author: Lijia Yu
 email: yu@lijiayu.net
@@ -12,7 +12,7 @@ locale: en_US
 ### Personal info and site tools info:
 twitter_username: yulijia
 github_username:  yulijia
-disqus_shortname: freshman21
+disqus_shortname: TOMO
 favicon:     "/images/favicon.ico"
 aboutme: Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it. # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
