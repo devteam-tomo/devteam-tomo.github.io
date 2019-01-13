@@ -2,7 +2,7 @@
 layout: post
 title: new
 excerpt: ""
-categories: articles
+categories: subject
 tags: [new-post]
 comments: true
 ---
