@@ -1,20 +1,20 @@
 ### Site info:
 title: Project TOMO
-tagline: Another Jekyll theme, Freshman twenty-first
-author: Lijia Yu
-email: yu@lijiayu.net
-description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-keywords: "Jekyll, theme, Freshman21"
+tagline: 토모의 스터디 기록 공간
+author: TOMO
+email: devteam-tomo@gmail.com
+description: "토모팀 스터디 기록소" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: ""
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://devteam-tomo.github.io" # the base hostname & protocol for your site
 locale: en_US
 
 ### Personal info and site tools info:
-twitter_username: yulijia
-github_username:  yulijia
+# twitter_username: yulijia
+github_username:  devteam-tomo
 disqus_shortname: TOMO
 favicon:     "/images/favicon.ico"
-aboutme: Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it. # these are shown on aboutme-sidebar.
+aboutme: We are TOMO team # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
@@ -41,62 +41,8 @@ locales:
       Google_search: "Site Search"
       Home: "Home"
       About: "About"
-      Guestbook: "Guestbook"
-      Subscribe: "Subscribe"
-    cn:
-      Aboutme: "关于我"
-      Archives: "存档"
-      Blogroll: "良师益友"        
-      Categories: "分类目录"    
-      Copyright_Notice: "版权声明"
-      Recent_Posts: "近期文章"
-      Tags: "标签" 
-      Previous: "前一页"
-      Next: "后一页"
-      PostedInCategories: "目录:"   
-      Taggedwith: "| 标签:"
-      PostDate: "| 发表时间: "
-      Google_search: "站内搜索"
-      Home: "首页"
-      About: "关于"
-      Guestbook: "留言"
-      Subscribe: "订阅"
-    jp:
-      Aboutme: "著者"
-      Archives: "アーカイブ"
-      Blogroll: "ブログロール"
-      Categories: "カテゴリー"
-      Copyright_Notice: "著作権表示"
-      Recent_Posts: "最近の投稿"
-      Tags: "タグ"
-      Previous: "前の記事"
-      Next: "次の記事"
-      PostedInCategories: "カテゴリー："
-      Taggedwith: "| タグ："
-      PostDate: "| 投稿日時: "
-      Google_search: "サイト内検索"
-      Home: "ホーム"
-      About: "このブログについて"
-      Guestbook: "メッセージ"
-      Subscribe: "購読"
-    pl:
-      Aboutme: "O mnie"
-      Archives: "Archiwum"
-      Blogroll: "Odnośniki"
-      Categories: "Kategorie"
-      Copyright_Notice: "Prawa autorskie"
-      Recent_Posts: "Najnowsze wpisy"
-      Tags: "Tagi"
-      Previous: "Starsze"
-      Next: "Nowsze"
-      PostedInCategories: "Kategoria"
-      Taggedwith: "tagi"
-      PostDate: "on "
-      Google_search: "Wyszukiwarka"
-      Home: "Strona główna"
-      About: "O mnie"
-      Guestbook: "Księga gości"
-      Subscribe: "Subskrypcja"
+      # Guestbook: "Guestbook"
+      # Subscribe: "Subscribe"
     kr:
       Aboutme: "저자 소개"
       Archives: "모든 게시물"
@@ -113,65 +59,10 @@ locales:
       Google_search: "게시물 검색"
       Home: "홈"
       About: "소개"
-      Guestbook: "방명록"
-      Subscribe: "구독하기"
-    ru:
-      Aboutme: "Обо мне" # = 'About me'
-      Archives: "Архив"
-      Blogroll: "Ссылки" # = 'Links'
-      Categories: "Разделы"
-      Copyright_Notice: "Авторские права"
-      Recent_Posts: "Свежие посты"
-      Tags: "Теги"
-      Previous: "Предыдущий пост"          # = 'Previous post'
-      Next: "Следующий пост"               # = 'Next post'
-      PostedInCategories: "Опубликовано в" # = 'Posted in'
-      Taggedwith: "с тегами"
-      PostDate: ""
-      Google_search: "Поиск на Google"
-      Home: "Домой"
-      About: "О блоге"            # = 'About blog'
-      Guestbook: "Гостевая книга"
-      Subscribe: "Подписаться"
-    tr:
-      Aboutme: "Hakkımda"
-      Archives: "Arşivler"
-      Blogroll: "Bağlantılar"
-      Categories: "Kategoriler"
-      Copyright_Notice: "Telif Hakkı Bildirimi"
-      Recent_Posts: "Son Yazılar"
-      Tags: "Etiketler"
-      Previous: "Daha Eski"
-      Next: "Daha Yeni"
-      PostedInCategories: "Şuraya gönderildi:"
-      Taggedwith: "ve şöyle etiketlendi:"
-      PostDate: "şu tarihte:"
-      Google_search: "Sitede Ara"
-      Home: "Anasayfa"
-      About: "Hakkında"
-      Guestbook: "Konuk Defteri"
-      Subscribe: "Abone Ol"
-    id:
-      Aboutme: "Tentang Saya"
-      Archives: "Arsip"
-      Blogroll: "Blog teman"
-      Categories: "Kategori"
-      Copyright_Notice: "Legal Formal"
-      Recent_Posts: "Post Terkini"
-      Tags: "Tag"
-      Previous: "Lebih lama"
-      Next: "Lebih baru"
-      PostedInCategories: "Diposting di"
-      Taggedwith: "dan ditag"
-      PostDate: "pada "
-      Google_search: "Pencarian Situs"
-      Home: "Beranda"
-      About: "Tentang"
-      Guestbook: "Buku tamu"
-      Subscribe: "Langganan"
+      # Guestbook: "방명록"
+      # Subscribe: "구독하기"
 
 ### your Blogroll info, only name can shown on the page.
-
 Blogroll:
       - name: Freshman
         href: http://yulijia.net/freshman
