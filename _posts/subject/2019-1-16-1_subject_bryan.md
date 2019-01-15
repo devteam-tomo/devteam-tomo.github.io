@@ -8,7 +8,7 @@ comments: true
 ---
 
 ### 주제
-![book](/images/bryan/1stSubject.jpg)
+![book](/images/bryan/1stSubject.JPG)
 
 - 내용 : <code>테스트 주도 개발(켄트 백 저)</code> 내용 리뷰
 - 계획 : 전체가 테스트 주도 개발 예제와 파이썬을 활용한 xUnit 구현으로 나뉘어있음. 우선 샘플 예제를 전부 작성하고 리뷰한 후, 추가적으로 Java를 활용하여 JUnit을 구현해보겠습니다.
