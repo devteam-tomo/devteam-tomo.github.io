@@ -3,7 +3,7 @@ layout: post
 title: 1월_Judy_자바 성능 뉴팅 이야기 리뷰
 excerpt: ""
 categories: subject
-tags: [new-post]
+tags: [new-post,java]
 comments: true
 ---
 
