@@ -21,7 +21,6 @@ comments: true
 ```
 현재 회사에서는 달러 화폐에 대한 채권 포트폴리오 관리 시스템을 판매하고 있다.
 
-<<<<<<< HEAD
 그러던 중 새로운 고객으로 부터 "새로운 채권 펀드를 시작하려 하는데 다른 화폐로 채권을 다룰 수 있도록 커스터마이징 해주세요"라는 요청을 받았다.
 
 이를 반영하기 위해 TDD를 이용하여 리팩토링을 진행해보자.
@@ -60,14 +59,66 @@ comments: true
 
 ```
 $5 + 10CHF = $10(환율이 2:1 인 경우)
-*$5 * 2 = $10*
+$5 * 2 = $10
 ```
+우선 위의
 
 우선 위의 기능(Operation 혹은 Method)을 구현하기에 앞서 테스트 케이스에 대해 작성해야하는데 어떠한 기능이 필요한지 그 기능에 대한 인터페이스를 우선 고민해보는 습관이 필요하다.
 
+기존의 Dollar 객체에 2를 곱하는 테스트를 작성하면 아래와 같다.
 ```
-public 
+import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
+
+public class DollarTest {
+    @Test
+    public void testMuliplication(){
+        Dollar five = new Dollar(5);
+        five.times(2)
+        assertThat(five.amount).isEqualTo(10);
+    }
+}
 ```
-=======
-스터디 내용을 자유롭게 입력합니다.
->>>>>>> cf202c88e83d620f1681489cef0d784df0423d4c
+
+위의 테스트를 위해 필요한 사항을 리스트로 적어보자
+
+1. Dollar 클래스(생성자)
+2. times Method
+3. amount 변수(int)
+
+그리고 위의 3가지 사항을 틀만 구현하여 컴파일에러 상태부터 벗어나자.물론 아주 간단한 기능을 하는 함수이므로 바로 구현가능하겠지만.. 우선은 TDD를 연습하는 목적이므로 아주 작은 단위로 작업을 진행하도록 권장한다.
+
+위의 세가지 리스트 대로 "틀만 완성된" Dollar Class는 아래와 같다.
+```
+package Dollar;
+
+public class Dollar {
+    public int amount;
+    
+    public Dollar(int dollar) {}
+
+    public void times(int times) {}
+}
+
+```
+틀만 완성되었기 때문에 테스트에는 아직도 빨간색의 막대가 떠있다.
+
+이를 최소한의 구현(하드코딩...)을 통해 통과시켜보자.
+
+```
+package Dollar;
+
+public class Dollar {
+    public int amount = 10;
+
+    public Dollar(int dollar) {
+
+    }
+
+    public void times(int times) {
+    }
+}
+```
+하지만 현재로서는 만약 처음 객체를 생성할 때 입력한 값을 바꾸면 다시 테스트는 빨간색의 막대를 보여주기 때문에 약간의 수정을 더 진행해보자.
+
+
