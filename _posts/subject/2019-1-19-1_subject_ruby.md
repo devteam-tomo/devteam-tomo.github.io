@@ -21,14 +21,16 @@ comments: true
 
 ## 본격적으로 알아보자
 
-### 1. Java SpirngFramework의 Bean 관리가 어떻게 이뤄지는 지 개념 이해하기
+### Chapter 1) Java SpirngFramework의 Bean 관리가 어떻게 이뤄지는 지 개념 이해하기
 
 ApplicationContext는 javaspring에서 오브젝트에 대한 생성과 관계설정을 담당한다. IoC컨테이너라고 하기도 한다.
 1. ApplicationContext는 앞의 @Configuration이 붙은 ContextLoader와 ServiceFactory를 설정정보로 등록하고, Bean 목록을 만든다. 
 2. 클라이언트가 ApplicationContext의 getBean 메소드를 호출하면 Bean 목록에서 요청한 이름이 있는지 찾는다.
 3. 있다면 Bean을 생성하는 메소드를 호출해서 오브젝트를 생성시킨 후 클라이언트에게 리턴해 준다.
 
-### 2. Java SpringFramework Autowired기능을 구현하기 위해 필요한 Library 준비하기
+---
+
+### Chapter 2) Java SpringFramework Autowired기능을 구현하기 위해 필요한 Library 준비하기
 
 
 <code>spring-core</code>,<code>spring-beans</code>,<code>spring-context</code> dependency를 pom.xml에 추가해준다.
@@ -75,8 +77,10 @@ cglib 오류를 해결하기 위해서 <code>cglib</code> dependency를 추가�
 </dependency>
 ```
 
+---
 
-### 3. 실전! 프로젝트 만들어보기
+### Chapter 3) 실전! 프로젝트 만들어보기
+
 
 #### 개발환경
 
@@ -85,6 +89,7 @@ cglib 오류를 해결하기 위해서 <code>cglib</code> dependency를 추가�
 |Java|1.8.0_121|
 |OS|Window 10|
 |javaspring|3.1.1.RELEASE|
+
 
 #### Configuration 클래스 설정
 
