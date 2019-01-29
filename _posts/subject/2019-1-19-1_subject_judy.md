@@ -18,4 +18,5 @@ comments: true
 
 ### 내용
 
-스터디 내용을 자유롭게 입력합니다.
+아래 블로그에 내용 정리하였습니다.
+https://chaberry.tistory.com/3
