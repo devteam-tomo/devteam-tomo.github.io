@@ -7,6 +7,11 @@ tags: [new-post,java,javaspring]
 comments: true
 ---
 
+
+
+[TOC]
+
+
 ## 주제
 
 
@@ -21,7 +26,7 @@ comments: true
 
 ## 본격적으로 알아보자
 
-#### Chapter 1) Java SpirngFramework의 Bean 관리가 어떻게 이뤄지는 지 개념 이해하기
+### Chapter 1) Java SpirngFramework의 Bean 관리가 어떻게 이뤄지는 지 개념 이해하기
 
 ApplicationContext는 javaspring에서 오브젝트에 대한 생성과 관계설정을 담당한다. IoC컨테이너라고 하기도 한다.
   1. ApplicationContext는 앞의 @Configuration이 붙은 ContextLoader와 ServiceFactory를 설정정보로 등록하고, Bean 목록을 만든다. 
@@ -30,7 +35,7 @@ ApplicationContext는 javaspring에서 오브젝트에 대한 생성과 관계�
 
 ---
 
-#### Chapter 2) Java SpringFramework Autowired기능을 구현하기 위해 필요한 Library 준비하기
+### Chapter 2) Java SpringFramework Autowired기능을 구현하기 위해 필요한 Library 준비하기
 
 
 <code>spring-core</code>,<code>spring-beans</code>,<code>spring-context</code> dependency를 pom.xml에 추가해준다.
@@ -79,10 +84,10 @@ cglib 오류를 해결하기 위해서 <code>cglib</code> dependency를 추가�
 
 ---
 
-#### Chapter 3) 실전! 프로젝트 만들어보기
+### Chapter 3) 실전! 프로젝트 만들어보기
 
 
-##### 1. 개발환경
+#### 1. 개발환경
 
 |환경|버전|
 |:---:|:---:|
@@ -91,7 +96,7 @@ cglib 오류를 해결하기 위해서 <code>cglib</code> dependency를 추가�
 |javaspring|3.1.1.RELEASE|
 
 
-##### 2. Configuration 클래스 설정
+#### 2. Configuration 클래스 설정
 
 Bean객체의 설정 정보를 컨트롤 하는 Configuration 클래스 생성하자.
 
@@ -132,7 +137,7 @@ public class ContextLoader {
 ...
 ```
 
-##### 3. Bean 정보를 가진 Factory클래스
+#### 3. Bean 정보를 가진 Factory클래스
 
 <code>tomo.config.factory.ServiceFactory.java</code>
 
@@ -150,7 +155,7 @@ public class ServiceFactory {
 
 ```
 
-##### 4. tomo.app 패키지 하위에 <code>@Component</code>, <code>@Service</code> 등의 어노테이션을 가진 클래스를 생성한다.
+#### 4. tomo.app 패키지 하위에 <code>@Component</code>, <code>@Service</code> 등의 어노테이션을 가진 클래스를 생성한다.
 
 <code>tomo.app.user.service.UserServiceImpl.java</code>
 
@@ -179,7 +184,7 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-##### 5. Main클래스 작성하기
+#### 5. Main클래스 작성하기
 
 <code>tomo.config.MainApp.java</code>
 
@@ -199,7 +204,7 @@ public class MainApp {
 }
 ```
 
-#### 마무리
+## 마무리
 
 이 예제는 web application이 아닌, java application 환경에서 javaspring의 어노테이션 기능을 어떻게 사용할 수 있는 지 간략한 예제를 다뤄본 글입니다. ApplicationContext가 javaspring framework에서 Bean의 생성과 관계연결 어떻게 하는지 이해할 있었던 경험이었습니다.
 
