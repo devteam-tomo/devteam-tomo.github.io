@@ -8,8 +8,8 @@ comments: true
 ---
 
 
-
-[TOC]
+* 목차
+{:toc}
 
 
 ## 주제
