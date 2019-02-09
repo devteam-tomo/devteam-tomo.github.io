@@ -198,22 +198,24 @@
   padding:20px 15px;
   margin-bottom: 20px;
   li{
+    
     padding-top:10px;
     position:relative; 
     list-style-type:none;  
   }
+  li:first-child {
+    padding-top: 0px;
+  } 
 }
 
-#markdown-toc:before{
-  content:"Table of Contents";
-  font-weight: 700;
-  padding-left:10px;
-  border-bottom:5px solid $grey-color-light !important;
-  display:block;
-  font-size:18px
-}
-
-
+// #markdown-toc:before{
+//   content:"Topic of Contents";
+//   font-weight: 700;
+//   padding-left:10px;
+//   border-bottom:5px solid $grey-color-light !important;
+//   display:block;
+//   font-size:18px
+// }
 
 .post-content {
   p { padding:$spacing-unit/5 0; } 
