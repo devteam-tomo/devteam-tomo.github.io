@@ -198,14 +198,13 @@
   padding:20px 15px;
   margin-bottom: 20px;
   li{
-    
     padding-top:10px;
     position:relative; 
     list-style-type:none;  
   }
-  li:first-child {
-    padding-top: 0px;
-  } 
+}
+#markdown-toc>li:first-child {
+  padding-top: 0px;
 }
 
 // #markdown-toc:before{
