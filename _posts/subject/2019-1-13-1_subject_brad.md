@@ -8,7 +8,7 @@ comments: true
 ---
 
 ### 주제
-![book](/images/bread/B1619666323_l.jpg)
+![book](/images/brad/B1619666323_l.jpg)
 
 - 내용 : <code>자바로 배우는 핵심 자료구조와 알고리즘</code> 내용 리뷰
 

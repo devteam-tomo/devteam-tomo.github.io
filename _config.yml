@@ -80,6 +80,5 @@ kramdown:
         syntax_highlighter: rouge
 plugins: 
   - jekyll-paginate
-  - jekyll-toc
 paginate: 5
 excerpt_separator: <!-- more -->
