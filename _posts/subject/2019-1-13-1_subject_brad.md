@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1월_Bread_자바로 배우는 핵심 자료구조와 알고리즘 리뷰
+title: 1월_Brad_자바로 배우는 핵심 자료구조와 알고리즘 리뷰
 excerpt: ""
 categories: subject
 tags: [new-post]
