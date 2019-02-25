@@ -6,63 +6,98 @@ categories: subject
 tags: [new-post]
 comments: true
 ---
+### Chapter 1. Interface 
 
-### 주제
-![book](/images/brad/B1619666323_l.jpg)
+![tds_book](/images/brad/tds_book.jpg){: .center}
 
 - 내용 : <code>자바로 배우는 핵심 자료구조와 알고리즘</code> 내용 리뷰
+  
+* 목차
+{:toc}
+
+# 학습목표
+
+앞으로 실습을 통해 다음의 3가지 학습 목표를 갖는다.
+
+### 자료구조
+{: .no_toc}
+
+- 자바 컬렉션 프레임워크<sub>(Java Collection Framework, JFC)</sub> 구조로 시작하여, List, Map, 과 같은 자료구조를 사용과 동작 방법
+
+### 알고리즘 분석
+{: .no_toc}
+
+- 코드를 분석하고 이 코드가 얼마나 빠른 동작을 하고 얼마나 많은 공간(메모리)를 필요한지 예측
+
+### 정보 검색
+{: .no_toc}
+
+- 자료구조와 알고리즘을 활용한 간단한 웹 검색 엔진을 만들어 봄
 
 ---
 
-### Chapter 1. Interface 
+# List Interface
+
+앞으로 몇가지 실습을 통해 `List Interface`를 분석하고 학습하려 한다.
+
+JFC<sub>Java Framework Collection</sub>는 List 라는 interface를 통해 ArrayList와 LinkedList라는 두 구현 클래스를 제공한다.
+
+List interface를 구현하는 클래스는 약 20가지 메서드를 포함한 특정 메서드를 구현해야한다.
+
+따라서 List Interface를 구현하는 ArrayList와 LinkedList는 모두 동일한 메서드를 제공하므로 상호 교환할 수 있다는 것이다.
+
+그렇다면 이 두 클래스의 차이점은 무엇일까?
 
 ## ArrayList vs LinkedList
-Java Collection Framework(JCF)는 List라는 interface를 통해 ArrayList와 LinkedList를 제공한다.
 
 ![jfc](http://www.nextree.co.kr/content/images/2016/09/jdchoi_20140220_JCF.png)
 
-두 클래스의 차이를 자세히 살펴보기 위해선 다음의 링크를 참고하자 [ArrayList와 LinkedList 차이](http://www.nextree.co.kr/p6506/)
+두 클래스의 차이는 다음의 링크에 자세히 소개되고 있다. [ArrayList와 LinkedList 차이](http://www.nextree.co.kr/p6506/)
 
-정말 간단하게만 둘의 차이를 요약하자면, 
+쉽게 정리하자면 다음과 같다.
 
- > ArrayList는 데이터들이 순서대로 쭉 늘어선 배열의 형식을 취하고 있는 반면 LinkedList는 순서대로 늘어선 것이 아니라 자료의 주소 값으로 서로 연결되어 있는 구조를 하고 있다.
+![list](/images/brad/2_list.png)
+<figcaption>생활코딩의 리스트 비교</figcaption>
 
- 다시 말해,
+하나의 **건물(메모리)**에 **회사(List의 요소)**가 입주해있다. 
 
-<code>ArrayList</code>는 이름(Array)에서 볼 수 있듯이, index를 담고 있어서 특정 인덱스를 참고하고자 할 때 검색이나 접근에 용이하다.
+#### ArrayList
+{: .no_toc}
 
-반면 리스트 중간의 값이 제거/삽입 되는 경우 중복되거나 비어있는 인덱스를 허용하지 않기 때문에 모든 배열 값들의 이동이 일어난다. 따라서 빈번한 **삽입/제거**가 발생하는 경우에는 비효율적인 구조라 볼 수 있다.
+<code>Array List</code>는 그림과 같이 건물에 나란히 회사가 위치해있는 형태이다. 회사의 사무실이 이렇게 나란히 붙어있기 때문에 사무실의 위치를 찾기가 굉장히 수월하다.
 
-<code>LinkedList</code>는 역시 이름(Linked)에서 볼 수 있듯이, 줄줄이 노드가 연결된 구조이다.
+하지만 이러한 방식은 빈 공간을 허용하지 않기 때문에, 중간의 하나의 사무실에 공실이 발생할 경우 전체 사무실이 빈 공간을 채우려 이동해야 한다.
 
-LinkedList는 배열의 index값이 아닌, 각 객체의 주소값으로 줄줄이 연결되어 있는 구조이기 때문에 **검색**(외부에서 특정 객체에 대한 접근)은 효율적이지 못하다.
+#### LinkedList
+{: .no_toc}
 
-하지만 이벤트가 발생한 노드의 주소지만 알고 있다면, 그 위치에 **삽입/제거**만 진행할 뿐 전체 노드의 구조는 변함이 없기 때문에 매우 빠른 처리를 할 수 있다.
+이와달리 <code>Linked List</code>는 사무실이 **산발적으로 연결(Linked)**된 방식이다.
 
-![list_compare](http://i.stack.imgur.com/skN72.png)
+우리는 사무실의 위치를 찾기 위해 각각의 사무실을(예: 201호 - 304호 - 408호 등) 방문하여 다음 사무실이 어디인지를 물어봐야한다.
 
+예를들면, **201호**를 먼저 방문하여 직원에게 다음 사무실이 어딘지 물어봐야 다음 사무실이 **304호** 라는 것을 알 수 있다는 것이다.
 
-#### 검색
-데이터 검색 시에는 ArrayList는 LinkedList에 비해 굉장히 빠르다. ArrayList는 인덱스 기반의 자료 구조이며 get(int index) 를 통해 O(1) 의 시간 복잡도를 가진다. 그에 비해 LinkedList는 검색 시 모든 요소를 탐색해야 하기 때문에 최악의 경우에는 O(N)의 시간 복잡도를 가진다.
+어떤가, 벌써 찾아가기가 번거롭다.
 
-#### 삽입, 삭제
+하지만 이 방식은 나란히 있는 것이 아니기 때문에 중간에 사무실에 공실이 발생하거나 추가되어도 전혀 상관없다. 어차피 우리는 각자의 위치(주소)를 갖고 있기 때문이다.
 
-LinkedList에서의 데이터의 삽입, 삭제 시에는 ArrayList와 비교해 굉장히 빠른데, LinkedList는 이전 노드와 다음 노드를 참조하는 상태만 변경하면 되기 때문이다. 삽입, 삭제가 일어날 때 O(1)의 시작 복잡도를 가진다. 반면 ArrayList의 경우 삽입, 삭제 이후 다른 데이터를 복사해야 하기 때문에 최악의 경우 O(N) 의 성능을 내게 된다.
+따라서 다음의 특징을 갖는다.
 
-
->단순하게 생각하면 쉬운 것 같다.<br/>
-우리는 귀찮거나 반복되거나 하는 비생산적인 일을 싫어하는 프로그래머다.<br/>
-극도의 효율을 중시하는 프로그래머가 사용하고, 만든 언어인 만큼 이 두 개념 역시 서로의 부족한 부분에 대한 효율을 채우기 위하여 구분된 클래스이다.<br/>
-따라서 한가지 개념만 완벽하게 이해한다면, 그와 비슷한 기능을 하는 다른 클래스/객체에 대한 이해는 덤으로 딸려 올 것이다.<br/>
+![List성능비교](https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2885.png)
 
 ---
 
-다시 본론으로 돌아와 List Interface를 살펴보자.
+# 실습1
 
-## List Interface
-ArrayList와 LinkedList는 <code>List</code>를 베이스로 하여 동작하는 클래스이다.
+본론으로 돌아와 List Interface를 살펴보자.
+
+## List Interface 사용하기
+
+ArrayList와 LinkedList는 <code>List</code>를 구현(implements)하여 사용하는 클래스이다.
 
 따라서 다음과 같은 구조로 사용할 수 있다.
+
+## 실습 코드
 
 ~~~java
 public class ListClientExample {
@@ -89,21 +124,52 @@ public class ListClientExample {
 }
 ~~~
 
-## @SuppressWarnings Annotaion
+## 테스트 코드
+~~~java
+public class ListClientExampleTest {
+	/**
+	 * Test method for {@link ListClientExample}.
+	 */
+	@Test
+	public void testListClientExample() {
+		ListClientExample lce = new ListClientExample();
+		@SuppressWarnings("rawtypes")
+		List list = lce.getList();
+		assertThat(list, instanceOf(ArrayList.class) );
+	}
+}
+~~~
 
-1. all : 모든 경고를 억제
-2. cast : 캐스트 연산자 관련 경고 억제
-3. dep-ann : 사용하지 말아야 할 주석 관련 경고 억제
-4. deprecation : 사용하지 말아야 할 메소드 관련 경고 억제
-5. fallthrough : switch문에서의 break 누락 관련 경고 억제
-6. finally : 반환하지 않는 finally 블럭 관련 경고 억제
-7. null : null 분석 관련 경고 억제
-8. rawtypes : 제네릭(데이터 형식에 의존하지 않고, 하나의 값이 여러 다른 데이터 타입들을 가질 수 있음)을 사용하는 클래스 매개 변수가 불특정일 때의 경고 억제
-9. unchecked : 검증되지 않은 연산자 관련 경고 억제
-10. unused : 사용하지 않는 코드 관련 경고 억제
-11. incomplete-switch : switch문 case에 누락 관련 경고 제외
+### 테스트 실행결과
+{: .no_toc}
 
----
+![failed_test](/images/brad/1_tds_ch1_failed_test.png)
+
+첫번째 빨간불을 맛보았다.
+
+오류 내용을 살펴보면, ArrayList의 instance를 기대했는데, **But** LinkedList 라는 것이다.
+
+`getList()`로 부터 획득하는 리스트의 인스턴스가 문제가 있는 모양인데, 거슬러 올라가면 getList()의 리스트 인스턴스는 
+
+~~~java
+    @SuppressWarnings("rawtypes")
+    public ListClientExample() {
+        list = new LinkedList();
+    }
+~~~
+
+이처럼 LinkedList()로 초기화된 모습이다.
+
+테스트를 통과시키기 위해선 `ArrayList`가 필요하다. 이 초기화 작업만 바꾸어 주면 될 것 같다.
+
+~~~java
+    @SuppressWarnings("rawtypes")
+    public ListClientExample() {
+        list = new ArrayList();
+    }
+~~~
+
+![success_test](/images/brad/1_tds_ch1_success.png)
 
 이 클래스의 구성은 유용하진 않지만, List를 캡슐화하는 클래스의 필수 요소를 가지고 있다.
 
@@ -115,15 +181,25 @@ public class ListClientExample {
 
 > 여기서 말하는 '인터페이스'는  자바의 인터페이스가 아닌, 일반적인 의미의 인터페이스를 말한다.
 
+첫 실습은 비교적 싱겁게(?) 끝났지만, 앞으로 다루게 될 List Interface에 대한 내용을 다루어 보았다.
 
-## [생각해보기]
+이 장에서 기억해야 할 것은,
+- ArrayList와 LinkedList가 분명하게 컨셉이 다르다는 것
+- interface에 대한 개념(어떤 클래스를 초기화하느냐에 따라 유연하게 사용 가능)
+
+그러면 다음 장에서 본격적으로 List에 대해서 파해쳐보자서
+
+# 생각해보기
+
 1. 앞선 <code>ListClientExample</code> 클래스 생성자에서 ArrayList객체를 List 인터페이스로 교체하면 어떻게 될까?
-    - 생성자에서 인스턴스를 생성하지 않고, 인터페이스로만 선언한다면, getter로 쓰이고 있는 함수에서 반환할 수 있는 list의 실체(인스턴스)가 없으므로 컴파일이 제대로 되지 않는다.
+    - 생성자에서 인스턴스를 생성하지 않고, 인터페이스로만 선언한다면 List의 실체(인스턴스)가 없으므로 컴파일이 제대로 되지 않는다.
 
 2. 왜 List 인터페이스로는 인스턴스가 생성되지 않을까?
-    - 어려운 질문이네요....
+   - 자바의 interface는 인스턴스를 생성하는 객체로 사용되지 않는다. interface를 사용해서 어떠한 클래스를 디자인할 것인지 명세(또는 목차)만을 제공한다.
 
+   따라서 List가 interface로 설계된 이유 역시, List라는 전체 구조를 필요애 따라 구현(ArrayList or LinkedList)할 수 있도록 가이드라인만 제공해준 것이 아닐까.
 
 [참고]
 - https://www.holaxprogramming.com/2014/02/12/java-list-interface/
 - http://www.nextree.co.kr/p6506/
+- https://opentutorials.org/module/1335/8821
