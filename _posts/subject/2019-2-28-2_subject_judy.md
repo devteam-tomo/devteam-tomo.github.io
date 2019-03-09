@@ -1,0 +1,22 @@
+---
+layout: post
+title: 2월_Judy_자바 성능 튜닝 이야기 리뷰2
+excerpt: ""
+categories: subject
+tags: [java,book-review]
+comments: true
+---
+
+### 주제
+
+![book](/images/judy/book1.jpg)
+
+- 내용 : <code>자바 성능 튜닝 이야기(이상민 저)</code> 내용 리뷰
+- 계획 : 자바 성능 튜닝 이야기를 보며, 모르는 내용을 찾아보고, 중요하다고 생각하는 내용을 정리하여 리뷰하겠습니다.
+
+---
+
+### 내용
+
+아래 블로그에 내용 정리하였습니다.
+https://chaberry.tistory.com/4
